@@ -68,6 +68,10 @@ $white: #fff;
     position: relative;
 }
 
+::ng-deep .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover{
+    background: transparent !important;
+}
+
 @media(max-width:1000px) {
     :host {
         padding-left: 0;
