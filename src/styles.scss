@@ -1,0 +1,148 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$angular-portfolio-primary: mat.define-palette(mat.$indigo-palette);
+$angular-portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$angular-portfolio-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angular-portfolio-theme: mat.define-light-theme((
+  color: (
+    primary: $angular-portfolio-primary,
+    accent: $angular-portfolio-accent,
+    warn: $angular-portfolio-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($angular-portfolio-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import '~swiper/swiper-bundle';
+
+$primary-color: #777777;
+$white: #fff;
+
+.title{
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    margin: 0;
+    padding: 50px 0;
+    position: inherit;
+}
+
+button{
+    position: relative;	
+    border: none;
+    font-family: 'Rockwell';
+    background-color: transparent;
+    padding: 12px 30px;
+    color: $white;
+    font-size: 16px;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+    z-index: 1;
+}
+
+button:before, button:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+button:hover {
+	color: white;
+	transition-delay: .5s;
+}
+
+button:hover:before {
+	transition-delay: 0s;
+}
+
+button:hover:after {
+	transition-delay: .35s;
+}
+
+button:before, 
+button:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+button:before {
+	left: 0;
+	border: 1px solid $primary-color;
+	border-left: 0;
+	border-right: 0;	
+}
+
+button:after {
+	right: 0;
+}
+
+button:hover:before,
+button:hover:after {
+	width: 100%;
+}
+
+.border-button{
+    border: 1px solid $primary-color;
+    padding: 5px;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: fit-content;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+  color: $white;
+  text-decoration: none;
+}
+
+@media(max-width:500px) {
+  .title{
+    font-size: 40px;
+  }
+
+  button{
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+
+  .border-button {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
