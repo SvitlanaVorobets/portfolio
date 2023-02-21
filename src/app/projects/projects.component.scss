@@ -63,7 +63,7 @@ a{
 
 ::ng-deep .swiper-button-prev{
     top: 25px;
-    background-image: url(/assets/img/arrow.png);
+    background-image: url(../../assets/img/arrow.png);
     background-repeat: no-repeat;
     right: 80px;
     left: auto;
@@ -75,7 +75,7 @@ a{
 
 ::ng-deep .swiper-button-next{
     top: -3px;
-    background-image: url(/assets/img/arrow.png);
+    background-image: url(../../assets/img/arrow.png);
     rotate: 180deg;
     background-repeat: no-repeat;
     right: 25px;
