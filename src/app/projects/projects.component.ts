@@ -22,9 +22,6 @@ export class ProjectsComponent implements OnInit {
       },
       600: {
         slidesPerView: 3
-      },
-      1000: {
-        slidesPerView: 5
       }
     }
   }

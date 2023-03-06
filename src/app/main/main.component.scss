@@ -6,6 +6,9 @@ $white: #fff;
     display: block;
     padding-top: 100px;
     padding-bottom: 50px;
+}
+
+.main__container{
     position: relative;
 }
 
@@ -15,7 +18,7 @@ $white: #fff;
     z-index: 0;
     height: 300px;
     width: 300px;
-    top: 10%;
+    top: -5%;
 }
 
 .main__img{

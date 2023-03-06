@@ -122,10 +122,6 @@ button:hover:after {
 html, body { height: 100%; }
 body { margin: 0; }
 
-html {
-  scroll-behavior: smooth;
-}
-
 a{
   color: $white;
   text-decoration: none;
